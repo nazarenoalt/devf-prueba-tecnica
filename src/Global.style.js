@@ -20,7 +20,6 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Open Sans', Arial, Helvetica;
 }
 
 
@@ -310,5 +309,15 @@ template {
 
 [hidden] {
   display: none;
+}
+
+/* ATTRIBUTES ADDED BY THE DEVELOPER OUTSIDE NORMALIZE */
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica;
+}
+
+h1,  h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', Arial, Helvetica;
 }
 `

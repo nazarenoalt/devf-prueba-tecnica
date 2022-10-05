@@ -1,10 +1,11 @@
 import React from 'react'
-import { Wrapper } from './Header.style.js';
-
+import MenuIcon from '../MenuIcon/index.js';
+import { Wrapper, Logo } from './Header.style.js';
 const Header = () => {
   return (
     <Wrapper>
-      <div>Header</div>
+      <Logo>Artlist Catalogue</Logo>
+      <MenuIcon />
     </Wrapper>
   )
 }
