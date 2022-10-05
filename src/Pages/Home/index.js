@@ -1,9 +1,14 @@
 import React from 'react'
-
+import Searcher from '../../Components/Searcher'
+// Styles
+import { Wrapper, Container } from './Home.style'
 const Home = () => {
-  console.log('Hey I exist')
   return (
-    <div>Home</div>
+    <Wrapper>
+      <Container>
+        <Searcher />
+      </Container>
+    </Wrapper>
   )
 }
 

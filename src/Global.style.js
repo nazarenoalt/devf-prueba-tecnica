@@ -11,6 +11,11 @@ export const GlobalStyle = createGlobalStyle`
 
 }
 
+#App {
+  min-height: 100vh;
+  /* background: #F5F5F5;
+  background: linear-gradient(0deg, rgba(92,57,168,1) 0%, rgba(245,245,245,1) 50%); */
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 html {

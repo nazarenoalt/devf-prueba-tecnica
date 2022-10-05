@@ -7,14 +7,30 @@ export const Wrapper = styled.div`
     width: 100vw;
     background-color: var(--blue-violet);
     color: white;
-`;
 
-export const Logo = styled.h1`
-    margin: 0;
-    line-height: 80px;
-    font-size: 1.5rem;
+    .Header__icon-container {
+        cursor: pointer;
+    }
 
+    a {
+        text-decoration: none;
+    }
+    .logo {
+        margin: 0;
+        line-height: 80px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--white);
+        text-decoration: none;
+    }
+
+    .logo:active, logo:link {
+        color: var(--white);
+        text-decoration: none;
+    }
     @media screen and (min-width: 500px) {
-        font-size: 2rem;
+        .logo {
+            font-size: 2rem;
+        }
     }
 `;

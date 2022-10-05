@@ -1,11 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+// Components
 import MenuIcon from '../MenuIcon/index.js';
-import { Wrapper, Logo } from './Header.style.js';
+// Styles
+import { Wrapper } from './Header.style.js';
+
+
 const Header = () => {
   return (
     <Wrapper>
-      <Logo>Artlist Catalogue</Logo>
-      <MenuIcon />
+      <Link to='/'>
+        <h1 class="logo">Artlist Catalogue</h1>
+      </Link>
+      <div className="Header__icon-container">
+        <MenuIcon />
+      </div>
     </Wrapper>
   )
 }
