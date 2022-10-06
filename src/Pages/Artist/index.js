@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 // Components
 import ArtistCard from '../../Components/ArtistCard'
-import ArtistNotFound from '../../Components/ArtistNotFound'
+import ArtistNotFound from '../../Pages/ArtistNotFound'
 import Loading from '../../Components/Loading';
 const Artist = () => {
   const [artist, setArtist] = useState(null);

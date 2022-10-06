@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-
 import Home from './Pages/Home/index';
 import NotFound from './Pages/NotFound/index';
 import Artist from './Pages/Artist';
+import ArtistNotFound from './Pages/ArtistNotFound';
 // Components
 import Header from './Components/Header';
-import ArtistNotFound from './Components/ArtistNotFound';
 // Styles
 import { GlobalStyle } from './Global.style';
 
