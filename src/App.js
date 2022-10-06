@@ -1,25 +1,30 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
+// Pages
 import Home from './Pages/Home/index';
-import About from './Pages/About/index';
 import NotFound from './Pages/NotFound/index';
-import Header from './Components/Header';
-import { GlobalStyle } from './Global.style';
 import Artist from './Pages/Artist';
+// Components
+import Header from './Components/Header';
+import ArtistNotFound from './Components/ArtistNotFound';
+// Styles
+import { GlobalStyle } from './Global.style';
 
- const App = () => {
+const App = () => {
+  let { artistName } = useParams();
+
   return (
-    <div id="App">
-    <Router>
-      <Header />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/about" element={<About />} />
-        <Route exact path="/artist/*" element={<Artist />} />
-        <Route exact path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
-    <GlobalStyle />
-    </div>
+  <div className="App">
+  <Router>
+    <Header />
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route path="/artist/" element={<ArtistNotFound />} />
+      <Route path="/artist/:artistName" element={<Artist params={artistName} />} />
+      <Route exact path="*" element={<NotFound />} />
+    </Routes>
+  </Router>
+  <GlobalStyle />
+  </div>
   );
 }
 

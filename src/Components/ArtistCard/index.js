@@ -1,30 +1,40 @@
-import React, { useState, useEffect } from 'react'
-import { Container, Wrapper } from './ArtistCard.style'
+import { Container, Wrapper } from './ArtistCard.style';
+import { useState } from 'react';
 
 const ArtistCard = ({artist}) => {
- 
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const handleClick = () => {
+        setIsExpanded(!isExpanded);
+    }
 
   return (
+
     <Wrapper>
-        <Container >
-        <img
-            src={artist.strArtistFanart}
-            className="Artist-card__background-image"
-        />
-            <h2 className="Artist-card__artist-name">{artist.strArtist}</h2>
-
-            <section class="biography">
-                <p>{artist.strBiographyES}</p>
+        <Container isExpanded={isExpanded} backImage={artist.strArtistFanart}>
+            <section className="Artist-card__header">
+                <div className="Artist-card__gradient-container"></div>
             </section>
+            <section className="Artist-card__body">
+                <h2 className="Artist-card__artist-name">{artist.strArtist}</h2>
 
-            <section class="artist-data">
-                <p>Generos: {artist.strGenre}</p>
-                <p>Años de actividad: {artist.intFormedYear} - {artist.intDiedYear || 'presente'}</p>
-                <p>productora: {artist.strLabel}</p>
-                <p>pais: {artist.strCountry}</p>
-                
+                <article class="artist-data">
+                    <ul>
+                        <li><b>Generos:</b> {artist.strGenre}</li>
+                        <li><b>Actividad:</b> {artist.intFormedYear} - {artist.intDiedYear || 'presente'}</li>
+                        <li><b>Productora:</b> {artist.strLabel}</li>
+                        <li><b>Pais:</b> {artist.strCountry}</li>
+                    </ul>
+                </article>
+
+                <article class="Artist-card__biography">
+                        <details onClick={handleClick}>
+                            <summary>Biografía</summary>
+                            <p>{artist.strBiographyES}</p>
+                        </details>
+                </article>
             </section>
-
+            
             
         </Container>
     </Wrapper>

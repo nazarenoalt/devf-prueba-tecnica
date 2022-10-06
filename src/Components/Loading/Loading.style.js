@@ -4,19 +4,15 @@ export const Wrapper = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-height: calc(100vh - 80px);
+position: absolute;
+top: 80px;
+bottom: 0;
+right: 0;
+left: 0;
 
-.container {
-  text-align: center;
-
-  h2 {
+  h3 {
+    font-weight: bold;
     margin-top: 0;
-    font-size: 2rem;
+    text-align: center;
   }
-
-  a {
-    font-size: 1.5rem;
-  }
-}
-
 `;

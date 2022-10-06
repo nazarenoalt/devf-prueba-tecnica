@@ -7,16 +7,17 @@ top: 80px;
 bottom: 0;
 right: 0;
 left: 0;
-background: #F5F5F5;
-background: linear-gradient(0deg, rgba(92,57,168,1) 0%, rgba(245,245,245,1) 50%);
+display: flex;
+flex-direction: column;
+justify-content: center;
 `;
 
 export const Container = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
-margin-top: 200px;
-
+min-height: 300px;
+margin-bottom: 150px;
 .text-container {
     width: 80vw;
     margin-top: 100px;

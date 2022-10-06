@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 // Styles
 import { Wrapper } from './Searcher.style';
+
 const Searcher = () => {
   const [artistName, setArtistName] = useState('');
   const navigate = useNavigate();
@@ -18,10 +19,10 @@ const Searcher = () => {
     <Wrapper>
       <input
         type="text"
-        placeholder="Busca lo que desees..."
+        placeholder="Escribe un artista ;)"
         value={artistName}
         onChange={handleInputChange}
-        class="Searcher__input"
+        className="Searcher__input"
       />
 
       <input

@@ -5,16 +5,12 @@ export const GlobalStyle = createGlobalStyle`
 :root {
     --white: #F5F5F5;
     --blue-violet: #5C39A8;
-    --brillant-violet: #CF79D1;
-    --dark-violet: #70126A;
-    --soft-violet: #F2B1EE;
-
 }
 
-#App {
+#root {
   min-height: 100vh;
-  /* background: #F5F5F5;
-  background: linear-gradient(0deg, rgba(92,57,168,1) 0%, rgba(245,245,245,1) 50%); */
+  background: #F5F5F5;
+  background: linear-gradient(0deg, rgba(92,57,168,1) 0%, rgba(245,245,245,1) 300px);
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -324,5 +320,9 @@ body {
 
 h1,  h2, h3, h4, h5, h6 {
   font-family: 'Quicksand', Arial, Helvetica;
+}
+
+summary {
+  cursor: pointer;
 }
 `
