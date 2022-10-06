@@ -11,9 +11,9 @@ Esta app consiste en un buscador de artistas que le permite al usuario acceder a
 - Fuentes
     - Open Sans - Fuente estandar para parrafos y textos
     - Quicksand - Fuente estandar para títulos
-- Atomic Design
 - Normalize.css
-
+- Atomic Design
+- Responsive design
 ## **Estructura de la página**
 
 - **App**
