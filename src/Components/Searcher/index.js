@@ -19,7 +19,7 @@ const Searcher = () => {
     <Wrapper>
       <input
         type="text"
-        placeholder="Escribe un artista ;)"
+        placeholder="Escribe un nombre"
         value={artistName}
         onChange={handleInputChange}
         className="Searcher__input"
@@ -27,7 +27,7 @@ const Searcher = () => {
 
       <input
         type="submit"
-        value="Vamo' a buscar"
+        value="Buscar artista"
         className="Searcher__submit-button"
         onClick={handleSubmit}
       />
