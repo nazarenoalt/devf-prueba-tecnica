@@ -12,7 +12,7 @@ const Searcher = () => {
   }
   const handleSubmit = (event) => {
     event.preventDefault();
-    setArtistName(artistName.toLowerCase())
+    setArtistName(artistName)
     navigate('/artist/'+artistName);
   }
 

@@ -10,9 +10,9 @@ const Artist = () => {
 
   useEffect(() => {
     // Get artist name from the URL
-    const artistName = window.location.href.split('/').slice(-1);
-    console.log(artistName);
-    const API_URL = process.env.REACT_APP_API_URL + '/search.php?s=' + artistName;
+    const artistName = window.location.href.split('/').slice(-1)[0];
+    console.log(artistName)
+    const API_URL = process.env.REACT_APP_API_URL + '/search.php?s=' + artistName.toLowerCase();
 
     // Fetch Data
     (async function() {
