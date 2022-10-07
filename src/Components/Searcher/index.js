@@ -8,7 +8,7 @@ const Searcher = () => {
   const navigate = useNavigate();
 
   const handleInputChange = (event) => {
-    setArtistName(event.target.value);
+    setArtistName(event.target.value.toLowerCase());
   }
   const handleSubmit = (event) => {
     event.preventDefault();
