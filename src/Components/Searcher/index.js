@@ -8,10 +8,11 @@ const Searcher = () => {
   const navigate = useNavigate();
 
   const handleInputChange = (event) => {
-    setArtistName(event.target.value.toLowerCase());
+    setArtistName(event.target.value);
   }
   const handleSubmit = (event) => {
     event.preventDefault();
+    setArtistName(artistName.toLowerCase())
     navigate('/artist/'+artistName);
   }
 
